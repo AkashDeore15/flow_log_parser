@@ -18,8 +18,8 @@ class FlowLogParser:
                 
                 # Ensure correct extraction of dstport and protocol
                 try:
-                    dstport = parts[5].strip()
-                    protocol_num = parts[6].strip()
+                    dstport = parts[6].strip()
+                    protocol_num = parts[7].strip()
                     protocol = self.protocol_map.get(protocol_num, "unknown").lower()
                 except IndexError:
                     continue  # Skip if parsing fails
